@@ -259,13 +259,21 @@ fscan 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-G
 - [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
 
 演示视频[【安全工具】5大功能，一键化内网扫描神器——404星链计划fscan](https://www.bilibili.com/video/BV1Cv4y1R72M)
-# 0x07 Star Chart
+
+# 0x07  安全培训
+![img.png](image/5.png)
+学网络安全，就选玲珑安全！专业漏洞挖掘，精准定位风险；助力技能提升，塑造安全精英;玲珑安全，为您的数字世界保驾护航！  
+在线免费学习网络安全，涵盖src漏洞挖掘，0基础安全入门。适用于小白，进阶，高手: https://space.bilibili.com/602205041  
+玲珑安全往期学员报喜🎉: https://www.ifhsec.com/list.html  
+玲珑安全漏洞挖掘培训学习联系微信: linglongsec
+
+# 0x08 Star Chart
 [![Stargazers over time](https://starchart.cc/shadow1ng/fscan.svg)](https://starchart.cc/shadow1ng/fscan)
 
-# 0x08 捐赠
+# 0x09 捐赠
  如果你觉得这个项目对你有帮助，你可以请作者喝饮料🍹 [点我](image/sponsor.png)
 
-# 0x09 参考链接
+# 0x10 参考链接
 https://github.com/Adminisme/ServerScan  
 https://github.com/netxfly/x-crack  
 https://github.com/hack2fun/Gscan  
@@ -273,7 +281,9 @@ https://github.com/k8gege/LadonGo
 https://github.com/jjf012/gopoc
 
 
-# 0x10 最近更新
+# 0x11 最近更新
+## 2025 更新
+ - 添加插件
 ## 2024 更新
 
 - **2024/12/19**: v2.0.0 重大更新
