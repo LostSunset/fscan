@@ -108,7 +108,7 @@ func formatLogMessage(entry *LogEntry) string {
 
 // printLog 根据日志级别打印日志
 func printLog(entry *LogEntry) {
-	if LogLevel != "debug" && entry.Level == LogLevelDebug {
+	if LogLevel != "debug" && (entry.Level == LogLevelDebug || entry.Level == LogLevelError) {
 		return
 	}
 
@@ -132,8 +132,10 @@ func printLog(entry *LogEntry) {
 		fmt.Println(logMsg)
 	}
 
-	// 等待日志输出完成
-	time.Sleep(50 * time.Millisecond)
+	// 根据慢速输出设置决定是否添加延迟
+	if SlowLogOutput {
+		time.Sleep(50 * time.Millisecond)
+	}
 
 	// 重新显示进度条
 	if ProgressBar != nil {
@@ -171,7 +173,7 @@ func LogDebug(msg string) {
 	})
 }
 
-// LogInfo 记录进度信息
+// LogBase 记录进度信息
 func LogBase(msg string) {
 	handleLog(&LogEntry{
 		Level:   LogLevelBase,
@@ -181,6 +183,7 @@ func LogBase(msg string) {
 }
 
 // LogInfo 记录信息日志
+// [*]
 func LogInfo(msg string) {
 	handleLog(&LogEntry{
 		Level:   LogLevelInfo,
@@ -190,6 +193,7 @@ func LogInfo(msg string) {
 }
 
 // LogSuccess 记录成功日志，并更新最后成功时间
+// [+]
 func LogSuccess(result string) {
 	entry := &LogEntry{
 		Level:   LogLevelSuccess,
@@ -248,7 +252,7 @@ func CheckErrs(err error) error {
 	errLower := strings.ToLower(err.Error())
 	for _, key := range errs {
 		if strings.Contains(errLower, strings.ToLower(key)) {
-			time.Sleep(3 * time.Second)
+			time.Sleep(1 * time.Second)
 			return err
 		}
 	}

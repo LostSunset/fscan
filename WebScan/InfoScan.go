@@ -59,11 +59,11 @@ func InfoCheck(Url string, CheckData *[]CheckDatas) []string {
 	// 输出结果
 	if len(matchedInfos) > 0 {
 		result := fmt.Sprintf("发现指纹 目标: %-25v 指纹: %s", Url, matchedInfos)
-		Common.LogSuccess(result)
+		Common.LogInfo(result)
 		return matchedInfos
 	}
 
-	return []string{""}
+	return []string{}
 }
 
 // CalcMd5 计算内容的MD5并与指纹库比对
